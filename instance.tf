@@ -1,5 +1,5 @@
 resource "aws_instance" "ubuntu" {
-  ami           = "ami-0b6d9d3d33ba97d99"
+  ami           = "ami-0d6dd9e8265d48906" # Ubuntu 24.04
   instance_type = var.instance_type
   key_name      = "vockey"
 
@@ -9,7 +9,6 @@ resource "aws_instance" "ubuntu" {
 
 
   user_data = file("${path.module}/UserdataScript-phase-2.sh")
-
   user_data_replace_on_change = true
 
   tags = {
